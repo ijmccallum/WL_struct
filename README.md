@@ -1,4 +1,5 @@
  - `npm install`
+ - `npm install http-server -g` //for the staic server
  - `npm test`
  - `npm start`
 
@@ -66,3 +67,4 @@ ROOT will hopefully be www.wikilogic.org
 
  - Routing will happen server side. (but services workers can be used to enhance)
  - Testing and performance are our co-religions.
+ - Monoliths are not welcome - keep files small & simple(within reason)!
