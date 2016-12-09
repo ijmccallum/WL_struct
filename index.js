@@ -1,3 +1,7 @@
+/* This is the entry point for all web requests
+ * This will deal with handling the distrobution of requests to the static file server or api
+ */
+
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var path       = require('path');
