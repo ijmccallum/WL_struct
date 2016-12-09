@@ -7,7 +7,9 @@
     "test": "test",
     "start": "run-p s:*",
       "s:static": "http-server ./public",
-      "s:api": "node ./api/api.js"
+      "s:api": "node ./api/api.js",
+    "dev": "run-p d:* s:*",
+      "d:html": "pug public app -w"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "npm-run-all": "^3.1.2"
   },
   "devDependencies": {
+    "pug": "^2.0.0-beta6",
     "tape": "^4.6.3"
   }
 }

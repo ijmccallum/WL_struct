@@ -1,5 +1,5 @@
  - `npm install`
- - `npm install http-server -g` //for the staic server
+ - `npm install http-server pug-cli -g` //Static server, html compiler
  - `npm test`
  - `npm start`
 
@@ -68,3 +68,4 @@ ROOT will hopefully be www.wikilogic.org
  - Routing will happen server side. (but services workers can be used to enhance)
  - Testing and performance are our co-religions.
  - Monoliths are not welcome - keep files small & simple(within reason)!
+ - Assume your user is on an old iPhone running Opera Mini over a slow connection (Africa) or they're on UC-Browser (China). 
