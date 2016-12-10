@@ -9,7 +9,7 @@
       "s:static": "http-server ./public",
       "s:api": "node ./api/api.js",
     "dev": "run-p d:* s:*",
-      "d:html": "pug public app -w"
+      "d:app-html": "pug app --out ./public/app -w"
   },
   "author": "",
   "license": "ISC",
