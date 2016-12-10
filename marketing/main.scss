@@ -24,12 +24,6 @@ These create the structurs within which components will live
 
 /*
 COMPONENTS
-BEM land
+BEM land, also PUGs
 */
-@import "4_components/**/*.scss";
-
-/*
-UTILITY CLASSES
-Single responsability classes
- */
-@import "5_nukes/**/*.scss";
+@import "components/**/*.scss";
