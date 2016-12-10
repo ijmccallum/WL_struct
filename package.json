@@ -6,10 +6,13 @@
   "scripts": {
     "test": "test",
     "start": "run-p s:*",
-      "s:static": "http-server ./public",
-      "s:api": "node ./api/api.js",
-    "dev": "run-p d:* s:*",
-      "d:app-html": "pug app --out ./public/app -w"
+    "s:app": "http-server ./public",
+    "s:api": "node ./api/api.js",
+    "dev-app": "run-p da:* s:*",
+    "da:app-html": "pug app --out ./public/app -w",
+    "dev-market": "run-p dm:* s:*",
+    "dm:html": "pug marketing --out ./public/marketing -w",
+    "dm:marketing-css": "node-sass marketing/scss -o public/marketing --importer node_modules/node-sass-glob-importer/dist/cli.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +23,8 @@
     "npm-run-all": "^3.1.2"
   },
   "devDependencies": {
+    "node-sass": "^4.0.0",
+    "node-sass-glob-importer": "^3.0.0",
     "pug": "^2.0.0-beta6",
     "tape": "^4.6.3"
   }

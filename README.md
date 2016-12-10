@@ -20,12 +20,17 @@
  - Getting & setting claims.
  - Get Set users.
 
+`/marketing` **Static file development**
+
+ - Home page, about, stats.
+ - compiles to `/public/marketing/...`
+
 `/public` **Compilation target**
 
  - Static pages & assets are compiled into here. Don't do any work in this folder, it'll be overwritten.
  - `/public/app` compiled front end files for the app.
  - `/public/admin` compiled front end files for the admin.
- - `/public/static` compiled static pages, home / about / marketing / stats.
+ - `/public/marketing` compiled static pages, home / about / marketing / stats.
  - Strict size & performance requirments for these files. (AA? AAA?)
 
 `/propagator` **System, ?**
@@ -39,17 +44,13 @@
  - Server side analysis - at some point this could probably become a legitimate "big data" thing. More PhD opportunities?
  - Renders public results to `/public/static/...`
 
-`/admin-client` **JS, ?**
+`/admin` **JS, ?**
 
  - Front-end development for the admin web interface (this can be fancy modern front end).
  - Compiles to `/public/admin/...` 
  - UI for triggering analysis / propegation.
  - UI for static pages (eg, the home / about / marketing pages).
-
-`/admin-server` **Static file generator?, admin system?**
-
  - Server side handling for the admin.
- - Static pages source.
  - Super strict authentication.
 
 ---
