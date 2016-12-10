@@ -24,6 +24,7 @@
 
  - Home page, about, stats.
  - compiles to `/public/marketing/...`
+ - To run these pages locally run `npm run dev-market` and open [localhost:8080](http://localhost:8080/)
 
 `/public` **Compilation target**
 

@@ -6,14 +6,15 @@
   "scripts": {
     "test": "test",
     "start": "run-p s:*",
-    "s:app": "http-server ./public",
+    "s:app": "http-server ./public/app",
     "s:api": "node ./api/api.js",
     "dev-app": "run-p da:* s:*",
     "da:app-html": "pug app --out ./public/app -w",
-    "dev-market": "run-p dm:* s:*",
+    "dev-market": "run-p dm:* ds:*",
     "dm:html": "pug marketing/pages --out ./public/marketing -w",
     "dm:marketing-css": "node-sass marketing -o public/marketing --importer node_modules/node-sass-glob-importer/dist/cli.js --output-style compressed",
-    "dm:watch-marketing-css": "sane \"npm run dm:marketing-css\" marketing --glob=**/*.scss"
+    "dm:watch-marketing-css": "sane \"npm run dm:marketing-css\" marketing --glob=**/*.scss",
+    "ds:server": "http-server ./public/marketing/"
   },
   "author": "",
   "license": "ISC",
