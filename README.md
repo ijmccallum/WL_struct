@@ -7,19 +7,20 @@
 
 ###Directory directory
 
-`/app`
+`/app` **PWA**
 
  - Front-end (client side) Development in here, compiles into `/public/app`
  - `pug` ☛ `HTML`
  - `scss` ☛ `CSS`
  - `es6` ☛ `JS`
 
-`/api`
+`/api` **Node, Express**
  
  - Requests are all authenticated.
- - `Node JS` with `Express JS`. This runs as it's own service.
+ - Getting & setting claims.
+ - Get Set users.
 
-`/public`
+`/public` **Compilation target**
 
  - Static pages & assets are compiled into here. Don't do any work in this folder, it'll be overwritten.
  - `/public/app` compiled front end files for the app.
@@ -27,27 +28,28 @@
  - `/public/static` compiled static pages, home / about / marketing / stats.
  - Strict size & performance requirments for these files. (AA? AAA?)
 
-`/propagator`
+`/propagator` **System, ?**
 
  - Server side propegation of claim states. 
  - Runs through every claim updating their status. 
  - There's probably a PhD in efficency to be pulled from what will be happening in here. 
 
-`/analysis`
+`/analysis` **System, ?**
 
  - Server side analysis - at some point this could probably become a legitimate "big data" thing. More PhD opportunities?
  - Renders public results to `/public/static/...`
 
-`/admin-client`
+`/admin-client` **JS, ?**
 
- - Front-end development for the admin web interface.
+ - Front-end development for the admin web interface (this can be fancy modern front end).
  - Compiles to `/public/admin/...` 
  - UI for triggering analysis / propegation.
  - UI for static pages (eg, the home / about / marketing pages).
 
-`/admin-server`
+`/admin-server` **Static file generator?, admin system?**
 
  - Server side handling for the admin.
+ - Static pages source.
  - Super strict authentication.
 
 ---
@@ -85,7 +87,6 @@ ROOT will hopefully be www.wikilogic.org
  - *Looking to add a claim:* logs into the app, does updates, hits save. Initial load hits the app static files, logging in and updates hit the API. 
  - *Looking to change all their personal details:* 
  - *Looking to donate to WL:* (Becomes a Patron & gains the ability to order paid analysis) 
- - 
 
 **Patron**: Anyone who has donated or paid for an analysis.
  - *Looking to run a computationally expensive operation:* logs into the app, clicks run, logs out waiting for the operation to finish. 
