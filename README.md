@@ -7,10 +7,19 @@
 
 ###Directory directory
 
+`/public` **Compilation target**
+
+ - Static pages & assets are compiled into here. Don't do any work in this folder, it'll be overwritten.
+ - `/public/app/` compiled front end files for the app.
+ - `/public/admin/` compiled front end files for the admin.
+ - `/public/marketing/` compiled static pages, home / about / marketing / stats.
+ - `/public/main.css` the base styles used through every part of WL. Typography etc.
+ - Strict size & performance requirments for these files. (AA? AAA?)
+
 `/app` **PWA**
 
  - Front-end (client side) Development in here, compiles into `/public/app`
- - `handlebars` ☛ `HTML`
+ - `mustache` ☛ `HTML`
  - `scss` ☛ `CSS`
  - `es6` ☛ `JS`
 
@@ -26,18 +35,9 @@
  - compiles to `/public/marketing/...`
  - To run these pages locally run `npm run dev-market` and open [localhost:8080](http://localhost:8080/)
 
- `/sass-base` **SASS - these styles underlie everything**
+`/sass-base` **SASS - these styles underlie everything**
 
  - Applies to every page, the app, the admin, the marketing pages.
- - normalize.css has been broken out throughout the relevant files for easier tweaking.
-
-`/public` **Compilation target**
-
- - Static pages & assets are compiled into here. Don't do any work in this folder, it'll be overwritten.
- - `/public/app` compiled front end files for the app.
- - `/public/admin` compiled front end files for the admin.
- - `/public/marketing` compiled static pages, home / about / marketing / stats.
- - Strict size & performance requirments for these files. (AA? AAA?)
 
 `/propagator` **System, ?**
 
@@ -65,13 +65,10 @@
 
 ROOT will hopefully be www.wikilogic.org
 
-*ROOT* Index.html! and all the static pages under the public folder
-
-*ROOT/app/* Log in for the main editing and in depth exploration experiance.
-
-*ROOT/api/* endpoints for talking to the api in JSON.
-
-*ROOT/admin/* For very special people (currently, just me ;)  
+ - *ROOT* Index.html! and all the static pages under the public folder
+    - */app/* Log in for the main editing and in depth exploration experiance.
+    - */api/* endpoints for talking to the api in JSON.
+    - */admin/* For very special people (currently, just me ;)  
 
 ---
 
