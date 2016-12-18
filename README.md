@@ -1,5 +1,5 @@
  - `npm install`
- - `npm install http-server pug-cli -g` //Static server, html compiler
+ - `npm install http-server mustache rollup -g` //Static server, html compiler, js compiler
  - `npm test`
  - `npm start`
 
@@ -10,7 +10,7 @@
 `/app` **PWA**
 
  - Front-end (client side) Development in here, compiles into `/public/app`
- - `pug` ☛ `HTML`
+ - `handlebars` ☛ `HTML`
  - `scss` ☛ `CSS`
  - `es6` ☛ `JS`
 
@@ -25,6 +25,11 @@
  - Home page, about, stats.
  - compiles to `/public/marketing/...`
  - To run these pages locally run `npm run dev-market` and open [localhost:8080](http://localhost:8080/)
+
+ `/sass-base` **SASS - these styles underlie everything**
+
+ - Applies to every page, the app, the admin, the marketing pages.
+ - normalize.css has been broken out throughout the relevant files for easier tweaking.
 
 `/public` **Compilation target**
 
