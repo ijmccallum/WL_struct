@@ -18,8 +18,10 @@
 
 `/app` **PWA**
 
+express & node serving the UI. Keeping this as a seporate 'stack' to help with scaling / compartmentalization.
+
  - Front-end (client side) Development in here, compiles into `/public/app`
- - `mustache` ☛ `HTML`
+ - `mustache` ☛ `HTML` (handlebars templating?)
  - `scss` ☛ `CSS`
  - `es6` ☛ `JS`
 
@@ -102,3 +104,11 @@ ROOT will hopefully be www.wikilogic.org
 
 **Overseer**: Tech leads for WL.
  - *Looking to check up on system performance:* logs into an admin UI, sees various stats about performance. (This will probably happen through the AWS UI).
+
+###Request routes (some examples to help think out the structure)
+
+ - **Homepage:** static .html file returned.
+ - **Stats page:** static .html file returned (rendered periodically by the system).
+ - **App (not logged in)** express - compiles template - returns.
+ - **Profile page:** express - auth / db - compiles template - returns.
+ - **App (logged in)** epress - auth / db - compiles template - returns.
