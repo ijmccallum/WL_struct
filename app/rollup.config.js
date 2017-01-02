@@ -16,5 +16,5 @@ export default {
     commonjs(),
     uglify()
   ],
-  dest: './public/app/bundle.js'
+  dest: './app/static/bundle.js'
 };

@@ -7,7 +7,7 @@
 
 ###Directory directory
 
-`/public` **Compilation target**
+`/public` **Compilation target for static assets**
 
  - Static pages & assets are compiled into here. Don't do any work in this folder, it'll be overwritten.
  - `/public/app/` compiled front end files for the app.
@@ -16,7 +16,7 @@
  - `/public/main.css` the base styles used through every part of WL. Typography etc.
  - Strict size & performance requirments for these files. (AA? AAA?)
 
-`/app` **PWA**
+`/app` **Express server for the app. PWA!**
 
 express & node serving the UI. Keeping this as a seporate 'stack' to help with scaling / compartmentalization.
 
@@ -25,34 +25,34 @@ express & node serving the UI. Keeping this as a seporate 'stack' to help with s
  - `scss` ☛ `CSS`
  - `es6` ☛ `JS`
 
-`/api` **Node, Express**
+`/api` **Express server for the JSON api.**
  
  - Requests are all authenticated.
  - Getting & setting claims.
  - Get Set users.
 
-`/marketing` **Static file development**
+`/marketing` **Static site for press kits / marketing / etc**
 
  - Home page, about, stats.
  - compiles to `/public/marketing/...`
  - To run these pages locally run `npm run dev-market` and open [localhost:8080](http://localhost:8080/)
 
-`/sass-base` **SASS - these styles underlie everything**
+`/base-styles` **The base styling for all web presences.**
 
  - Applies to every page, the app, the admin, the marketing pages.
 
-`/propagator` **System, ?**
+`/propagator` **System, tech?, claim state propegation throughout the whole claim DB.**
 
  - Server side propegation of claim states. 
  - Runs through every claim updating their status. 
  - There's probably a PhD in efficency to be pulled from what will be happening in here. 
 
-`/analysis` **System, ?**
+`/analysis` **System, tech?, runs analysis over the whole claim DB.**
 
  - Server side analysis - at some point this could probably become a legitimate "big data" thing. More PhD opportunities?
  - Renders public results to `/public/static/...`
 
-`/admin` **JS, ?**
+`/admin` **Express server for the WL admin - not public.**
 
  - Front-end development for the admin web interface (this can be fancy modern front end).
  - Compiles to `/public/admin/...` 

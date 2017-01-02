@@ -10,10 +10,13 @@ var hbsutils = require('hbs-utils')(hbs);
 var port = process.env.PORT || 3001;
 
 
+app.use(express.static(path.join(__dirname,'static')));
+
 //================================= Templating Engine https://www.npmjs.com/package/hbs
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/pages'); //the 'partials' directory
+app.set('views', __dirname + '/pages');
 hbs.registerPartials(__dirname + '/components');
+hbs.registerPartials(__dirname + '/components/alchemy');
 
 //================================= Routes
 var uiRouter = express.Router();

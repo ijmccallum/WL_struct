@@ -4,9 +4,9 @@
 //import $ from '../node_modules/jquery/dist/jquery.slim.js';
 
 //UI
-import workSpace from './work-space/work-space.js';
+import alchemy from './components/alchemy/alchemy.js';
 
 //Yep, only one onload listener, but we only need one
 window.onload = function(){
-    workSpace.init();
+    alchemy.init();
 };
